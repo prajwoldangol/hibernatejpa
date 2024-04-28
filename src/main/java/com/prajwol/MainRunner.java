@@ -29,11 +29,11 @@ public class MainRunner {
         }
     }
 
-    public static void createDepartment(Session s){
+    public static void createDepartment(Session s) {
         Transaction transaction = s.beginTransaction();
         try {
             Department d1 = new Department("IT", "CA");
-            Department d2= new Department("SALES", "GA");
+            Department d2 = new Department("SALES", "GA");
             Department d3 = new Department("MANAGERS", "FL");
             s.persist(d1);
             s.persist(d2);
@@ -45,6 +45,7 @@ public class MainRunner {
             e.printStackTrace();
         }
     }
+
     public static void findDepartment(Session session, int dId) {
         Transaction transaction = session.beginTransaction();
         try {
